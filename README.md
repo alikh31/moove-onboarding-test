@@ -1,5 +1,7 @@
 # Moove onboarding test
 
+[![Build Status](https://travis-ci.org/alikh31/moove-onboarding-test.svg?branch=master)](https://travis-ci.org/alikh31/moove-onboarding-test)
+
 This application will seach git hub users base on language on their public repositories
 
 ## Installation
