@@ -1,0 +1,5 @@
+{
+  "appPort": 3000,
+  "appRoot": "./",
+  "apiUrl": "https://api.github.com"
+}
