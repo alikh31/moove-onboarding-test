@@ -1,6 +1,6 @@
 # Moove onboarding test
 
-[![Build Status](https://travis-ci.org/alikh31/moove-onboarding-test.svg?branch=master)](https://travis-ci.org/alikh31/moove-onboarding-test)
+[![Build Status](https://travis-ci.org/alikh31/moove-onboarding-test.svg?branch=master)](https://travis-ci.org/alikh31/moove-onboarding-test) [![Coverage Status](https://coveralls.io/repos/github/alikh31/moove-onboarding-test/badge.svg?branch=master)](https://coveralls.io/github/alikh31/moove-onboarding-test?branch=master)
 
 This application will seach git hub users base on language on their public repositories
 
