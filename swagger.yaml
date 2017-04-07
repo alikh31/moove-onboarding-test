@@ -1,1 +1,72 @@
-api/swagger/swagger.yaml
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: moove-onboarding-test
+
+host: localhost:3000
+basePath: /search
+
+schemes:
+  - http
+  - https
+
+paths:
+  /github_user:
+    x-swagger-router-controller: github_user
+    get:
+      description: get
+      operationId: search
+      parameters:
+        - name: in
+          in: query
+          description: search user by one of login, email, full name; default is email
+          required: false
+          type: string
+          enum:
+            - fullname
+            - email
+            - login
+          default: email
+        - name: q
+          in: query
+          description: query value to search for, type specified with `in` parameter
+          type: string
+          x-example: "tom"
+        - name: language
+          in: query
+          description: language most used by the user in the public repositories
+          required: true
+          type: string
+          x-example: "javascript"
+          default: "javascript"
+      responses:
+        "200":
+          description: return `allow [ tags ]`
+          schema:
+            $ref: '#/definitions/userSearchResponse'
+          examples:
+            application/json; charset=utf-8:
+              [{
+                username: 'test',
+                name: 'test',
+                followers: 1,
+                avatar: 'https://avatars.githubusercontent.com/u/1?v=3'
+              }]
+
+  /swagger:
+    x-swagger-pipe: swagger_raw
+
+definitions:
+  userSearchResponse:
+    type: array
+    items:
+      type: object
+      properties:
+        username:
+          type: string
+        name:
+          type: string
+        follower:
+          type: number
+        avatar:
+          type: string
